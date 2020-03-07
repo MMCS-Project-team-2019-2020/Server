@@ -12,8 +12,8 @@ if ($res > 0) {
 	$data = mysqli_fetch_array($res);
 	$new_data = array('id' => $data['id'], 'name' => $data['name'], 'phone' => $data['phone'], 'login' => $data['login']);
 }
-else{
+else
 	$new_data = array('status' => "not exist user");
-}
+
 echo json_encode($new_data);
 }

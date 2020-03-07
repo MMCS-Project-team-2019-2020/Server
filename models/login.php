@@ -1,8 +1,8 @@
 <?php
-if (!islp()) {
+if (!islp())
 	exit();
-}
-else{
+else
+{
 include("db.php");
 //$password=md5($password);
 $link = db_connect();
@@ -11,8 +11,8 @@ $res = mysqli_num_rows($res);
 if ($res > 0) {
 	$status = array('status' => 1);
 }
-else{
+else
 	$status = array('status' => 0);
-}
-	echo json_encode($status);
+
+echo json_encode($status);
 }
