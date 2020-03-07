@@ -2,13 +2,17 @@
 include('modules/core.php');
 if (isset($_GET['action']))
 	$action = $_GET['action'];
-
 else
 	exit();
+
 if (islp()) {
 	$login = $_GET['login'];
 	$password = $_GET['password'];
 }
+if (islogin()) {
+	$login = $_GET['login'];
+}
+
 
 
 
