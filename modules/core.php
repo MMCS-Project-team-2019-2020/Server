@@ -13,3 +13,10 @@ function islogin()//есть ли логин?
 	else 
 		return false;
 }
+function iscard()//есть ли визитка?
+{
+	if (isset($_GET['login']) && isset($_GET['card-name']) && isset($_GET['card-caption']))
+		return true;
+	else 
+		return false;
+}

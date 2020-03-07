@@ -12,6 +12,11 @@ if (islp()) {
 if (islogin()) {
 	$login = $_GET['login'];
 }
+if (iscard()) {
+	$login = $_GET['login'];
+	$card_name = $_GET['card-name'];
+	$card_caption = $_GET['card-caption'];
+}
 
 
 
