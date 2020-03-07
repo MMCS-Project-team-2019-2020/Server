@@ -28,6 +28,9 @@ if ($action == "get-profile") {
 if ($action == "get-list-card") {
 	require("models/listcard.php");
 }
+if ($action == "card-create") {
+	require("models/cardcreate.php");
+}
 if ($action == "give-card") {
 	require("models/givecard.php");
 }
