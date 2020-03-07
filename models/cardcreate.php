@@ -16,7 +16,7 @@ if ($res > 0) {
 	$new_data = array('status' => 1);
 }
 else{
-	$new_data = array('status' => 0);
+	$new_data = array('status' => 'not exist user');
 }
 echo json_encode($new_data);
 }

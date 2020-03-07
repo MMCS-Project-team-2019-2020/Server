@@ -3,7 +3,10 @@ include('modules/core.php');
 if (isset($_GET['action']))
 	$action = $_GET['action'];
 else
+{
+	echo json_encode(array('status' => 'no action'));
 	exit();
+}
 
 if (islp()) {
 	$login = $_GET['login'];
