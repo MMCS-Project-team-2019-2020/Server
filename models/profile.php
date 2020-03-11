@@ -10,10 +10,10 @@ $res = mysqli_num_rows($res);
 if ($res > 0) {
 	$res = mysqli_query($link, "SELECT * FROM users WHERE login = '$login'");
 	$data = mysqli_fetch_array($res);
-	$new_data = array('id' => $data['id'], 'name' => $data['name'], 'phone' => $data['phone'], 'login' => $data['login']);
+	$new_data = array('response' => array('id' => $data['id'], 'name' => $data['name'], 'phone' => $data['phone'], 'login' => $data['login']));
 }
 else
-	$new_data = array('status' => "not exist user");
+	$new_data = array('response' => "not exist user");
 
 echo json_encode($new_data);
 }
