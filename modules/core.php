@@ -20,7 +20,7 @@ function iscard()//есть ли визитка?
 	else 
 		return false;
 }
-function isgive()//есть ли визитка?
+function isgive()//есть ли шара?
 {
 	if (isset($_GET['id_owner']) && isset($_GET['id_recipient']) && isset($_GET['id_card']))
 		return true;
