@@ -1,7 +1,7 @@
 <?php
 //
 if (!iscard())
-	exit();
+	exit(json_encode(array('status' => '0')));
 else
 {
 include("db.php");

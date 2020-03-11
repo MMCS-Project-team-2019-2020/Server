@@ -17,6 +17,11 @@ if (iscard()) {
 	$card_name = $_GET['card-name'];
 	$card_caption = $_GET['card-caption'];
 }
+if (isgive()) {
+	$id_owner = $_GET['id_owner'];
+	$id_recipient = $_GET['id_recipient'];
+	$id_card = $_GET['id_card'];
+}
 
 
 
