@@ -49,7 +49,7 @@ if ($action == "card-create") {
 if ($action == "give-card") {
 	require("models/givecard.php");
 }
-//Запрос - получить данные визитки//Пример: ?action=give-card&id_owner=1001&id_card=10004
+//Запрос - получить данные визитки//Пример: ?action=get-card&id_card=10004
 if ($action == "get-card") {
 	require("models/getcard.php");
 }
