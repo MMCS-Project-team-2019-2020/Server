@@ -1,9 +1,21 @@
 <?php
-bool islp()//есть ли логин и пароль?
+if (!isreg())
+	exit(json_encode(array('response' => 'no data')));
+else
 {
-	if (isset($_POST['login']) && isset($_POST['password']))
-		return true;
-	else 
-		return false;
+include("db.php");
+//$password=md5($password);
+$link = db_connect();
+$res = mysqli_query($link,"SELECT name FROM users WHERE login = '$login' ");
+$res = mysqli_num_rows($res);
+var_dump($res);
+if ($res == 0) {
+	$res = mysqli_query($link, "INSERT INTO users (`login`, `hash`, `name`, `phone`, `active`) VALUES ('$login', '$password', '$name', '$phone', 1) ");
+	var_dump($res);
+	$status = array('response' => array('status' => 1);
 }
-?>
+else
+	$status = array('response' => array('login' => 'existing', 'status' => 0));
+
+echo json_encode($status);
+}

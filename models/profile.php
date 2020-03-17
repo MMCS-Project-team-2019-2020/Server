@@ -1,6 +1,6 @@
 <?php
 if (!islogin())
-	exit();
+	exit(json_encode(array('response' => 'no data')));
 else
 {
 include("db.php");
@@ -13,7 +13,7 @@ if ($res > 0) {
 	$new_data = array('response' => array('id' => $data['id'], 'name' => $data['name'], 'phone' => $data['phone'], 'login' => $data['login']));
 }
 else
-	$new_data = array('response' => "not exist user");
+	$new_data = array('response' => array('login' => 'does not exist', 'status' => 0));
 
 echo json_encode($new_data);
 }

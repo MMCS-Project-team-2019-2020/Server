@@ -1,6 +1,6 @@
 <?php
 if (!islp())
-	exit();
+	exit(json_encode(array('response' => 'no data')));
 else
 {
 include("db.php");
@@ -9,10 +9,10 @@ $link = db_connect();
 $res = mysqli_query($link,"SELECT name FROM users WHERE login = '$login' AND hash = '$password'");
 $res = mysqli_num_rows($res);
 if ($res > 0) {
-	$status = array('response' => 1);
+	$status = array('response' => array('status' => 1);
 }
 else
-	$status = array('response' => 0);
+	$status = array('response' => array('login' => 'does not exist', 'status' => 0));
 
 echo json_encode($status);
 }

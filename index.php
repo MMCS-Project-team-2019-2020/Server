@@ -12,6 +12,12 @@ if (islp()) {
 if (islogin()) {
 	$login = $_GET['login'];
 }
+if (isreg()) {
+	$login = $_GET['login'];
+	$password = $_GET['password'];
+	$name = $_GET['name'];
+	$phone = $_GET['phone'];
+}
 if (iscard()) {
 	$login = $_GET['login'];
 	$card_name = $_GET['card-name'];
