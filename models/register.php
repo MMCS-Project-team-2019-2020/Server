@@ -12,7 +12,7 @@ var_dump($res);
 if ($res == 0) {
 	$res = mysqli_query($link, "INSERT INTO users (`login`, `hash`, `name`, `phone`, `active`) VALUES ('$login', '$password', '$name', '$phone', 1) ");
 	var_dump($res);
-	$status = array('response' => array('status' => 1);
+	$status = array('response' => array('status' => 1));
 }
 else
 	$status = array('response' => array('login' => 'existing', 'status' => 0));

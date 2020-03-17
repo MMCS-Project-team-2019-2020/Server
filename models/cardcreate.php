@@ -13,7 +13,7 @@ if ($res > 0) {
 	$data = mysqli_fetch_array($res);
 	$user_id = $data['0'];
 	$res = mysqli_query($link, "INSERT INTO card (`owner_id`, `name`, `caption`) VALUES ('$user_id', '$card_name', '$card_caption') ");
-	$new_data = array('response' => array('status' => 1);
+	$new_data = array('response' => array('status' => 1));
 }
 else
 	$new_data = array('response' => array('login' => 'does not exist', 'status' => 0));
