@@ -6,6 +6,7 @@ else
 {
 	include("db.php");
 	$link = db_connect();
+	console($action);
 	$res = mysqli_query($link,"SELECT name FROM users WHERE id = '$id_owner'");
 	$res = mysqli_num_rows($res);
 
