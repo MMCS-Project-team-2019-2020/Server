@@ -34,7 +34,7 @@ function isreg()//есть ли регистрация?
 	else 
 		return false;
 }
-function console($action)//есть ли регистрация?
+function console($action)//запись запроса в базу
 {
 	$date = date_default_timezone_set('Europe/Moscow');
 	$date = date('H:i:s d-m-Y');
