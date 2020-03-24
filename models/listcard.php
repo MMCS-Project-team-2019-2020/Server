@@ -1,9 +1,25 @@
 <?php
-bool islp()//есть ли логин и пароль?
+if (!islistcard())
+	exit(json_encode(array('response' => 'no data')));
+else
 {
-	if (isset($_POST['login']) && isset($_POST['password']))
-		return true;
-	else 
-		return false;
+	include("db.php");
+	$link = db_connect();
+	console($action);
+	$res = mysqli_query($link,"SELECT card_id FROM registry WHERE recipient_id = '$id_user'");
+	$res = mysqli_num_rows($res);
+	if ($res > 0) {
+		$recipient_cards = array();
+		$res = mysqli_query($link, "SELECT card_id FROM registry WHERE recipient_id = '$id_user'");
+		while($request = mysqli_fetch_array($res)) {
+
+			array_push($recipient_cards, $request['card_id']);
+		}
+		$new_data = array('response' => array('cards' => $recipient_cards), 'status' => 1);
+	}
+	else
+		$new_data = array('response' => array('user_id' => 'have not cards', 'status' => 0));
+
 }
+	echo json_encode($new_data);
 ?>

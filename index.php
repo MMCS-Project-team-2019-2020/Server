@@ -1,5 +1,7 @@
 <?php
 include('modules/core.php');
+
+//блок проверок на существование конкретных параметров в запросе. Если существуют, то сохраняем данные параметров.
 if (isset($_GET['action']))
 	$action = $_GET['action'];
 else
@@ -28,6 +30,9 @@ if (isgive()) {
 	$id_recipient = $_GET['id_recipient'];
 	$id_card = $_GET['id_card'];
 }
+if (islistcard()) {
+	$id_user = $_GET['id_user'];
+}
 
 
 
@@ -39,7 +44,7 @@ if ($action == "login") {
 if ($action == "register") {
 	require("models/register.php");
 }
-//Запрос - получить профиль(данные акка)//Пример:   ?action=get-profile&login=vasya
+//Запрос - получить профиль(данные акка)//Пример:   ?action=get-profile&login=vasya 
 if ($action == "get-profile") {
 	require("models/profile.php");
 }

@@ -34,7 +34,18 @@ function isreg()//есть ли регистрация?
 	else 
 		return false;
 }
+<<<<<<< HEAD
+function islistcard()//есть ли список визиток для юзера?
+{
+	if (isset($_GET['id_user']))
+		return true;
+	else 
+		return false;
+}
+function console($action)//есть ли регистрация?
+=======
 function console($action)//запись запроса в базу
+>>>>>>> 3f7b5ec9a0ec000b0a579b4429985a7971feaf25
 {
 	$date = date_default_timezone_set('Europe/Moscow');
 	$date = date('H:i:s d-m-Y');
