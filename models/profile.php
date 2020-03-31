@@ -15,8 +15,8 @@ else
 		$res2 = mysqli_query($link, "SELECT id FROM card WHERE owner_id = '$user_id'");
 		$own_cards = array();
 		while($card = mysqli_fetch_array($res2)) 
-			array_push($owner_cards, $card['id']);
-		
+			array_push($own_cards, $card['id']);
+
 		$new_data = array('response' => array('id' => $data['id'], 'name' => $data['name'], 'phone' => $data['phone'], 'login' => $data['login']), 'own_cards' => $own_cards );
 	}
 	else
