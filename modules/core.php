@@ -41,13 +41,19 @@ function islistcard()//есть ли список визиток для юзер
 	else 
 		return false;
 }
+function isgetcard()//есть ли id итки
+{
+	if (isset($_GET['id_card']))
+		return true;
+	else 
+		return false;
+}
 function console($action)//запись запроса в базу
 {
 	$date = date_default_timezone_set('Europe/Moscow');
 	$date = date('H:i:s d-m-Y');
 	$link = db_connect();
 	$ip = $_SERVER['REMOTE_ADDR'];
-	$data = 
 	$res = mysqli_query($link, "INSERT INTO queryes (`query`, `ip`, `date_time`) VALUES ('$action', '$ip', '$date') ");
 
 	return true;

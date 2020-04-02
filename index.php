@@ -33,6 +33,9 @@ if (isgive()) {
 if (islistcard()) {
 	$id_user = $_GET['id_user'];
 }
+if (isgetcard()) {
+	$id_card = $_GET['id_card'];
+}
 
 
 
