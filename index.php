@@ -21,9 +21,9 @@ if (isreg()) {
 	$phone = $_GET['phone'];
 }
 if (iscard()) {
-	$login = $_GET['login'];
-	$card_name = $_GET['card-name'];
-	$card_caption = $_GET['card-caption'];
+	$id_user = $_GET['id_user'];
+	$card_name = $_GET['card_name'];
+	$card_caption = $_GET['card_caption'];
 }
 if (isgive()) {
 	$id_owner = $_GET['id_owner'];

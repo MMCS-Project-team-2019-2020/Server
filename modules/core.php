@@ -15,7 +15,7 @@ function islogin()//есть ли логин?
 }
 function iscard()//есть ли визитка?
 {
-	if (isset($_GET['login']) && isset($_GET['card-name']) && isset($_GET['card-caption']))
+	if (isset($_GET['id_user']) && isset($_GET['card_name']) && isset($_GET['card_caption']))
 		return true;
 	else 
 		return false;
