@@ -1,18 +1,17 @@
 <?php
-if (!islogin())
+if (!isid())
 	exit(json_encode(array('response' => 'no data')));
 else
 {
 	include("db.php");
 	$link = db_connect();
 	console($action);
-	$res = mysqli_query($link,"SELECT name FROM users WHERE login = '$login'");
+	$res = mysqli_query($link,"SELECT name FROM users WHERE id = '$id_user'");
 	$res = mysqli_num_rows($res);
 	if ($res > 0) {
-		$res = mysqli_query($link, "SELECT * FROM users WHERE login = '$login'");
+		$res = mysqli_query($link, "SELECT * FROM users WHERE id = '$id_user'");
 		$data = mysqli_fetch_array($res);
-		$user_id = $data['id'];
-		$res2 = mysqli_query($link, "SELECT id FROM card WHERE owner_id = '$user_id'");
+		$res2 = mysqli_query($link, "SELECT id FROM card WHERE owner_id = '$id_user'");
 		$own_card = mysqli_fetch_array($res2);
 
 		$new_data = array('response' => array(	'id' => $data['id'],

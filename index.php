@@ -14,6 +14,9 @@ if (islp()) {
 if (islogin()) {
 	$login = $_GET['login'];
 }
+if (isid()) {
+	$id_user = $_GET['id_user'];
+}
 if (isreg()) {
 	$name = $_GET['name'];
 	$surname = $_GET['surname'];
