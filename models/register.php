@@ -12,7 +12,7 @@ else
 	if ($res == 0) {
 		$res = mysqli_query($link, "INSERT INTO users (`login`, `hash`, `name`, `phone`, `active`) VALUES ('$login', '$password', '$name', '$phone', 1) ");
 		$id_user=mysqli_insert_id($link);
-		$new_data = array('response' => array('id_card' => $id_user, 'status' => 1));
+		$new_data = array('response' => array('id_user' => $id_user, 'status' => 1));
 	}
 	else
 		$new_data = array('response' => array('login' => 'existing', 'status' => 0));

@@ -55,7 +55,7 @@ if ($action == "get-profile") {
 if ($action == "get-list-card") {
 	require("models/listcard.php");
 }
-//Запрос - Создать визитку//Пример:  ?action=card-create&login=login&card-name=testcard&card-caption=ratatatata
+//Запрос - Создать визитку//Пример:  ?action=card-create&id_user=1004&card_name=testcard&card_caption=ratatatata
 if ($action == "card-create") {
 	require("models/cardcreate.php");
 }
