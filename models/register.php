@@ -16,7 +16,7 @@ else
 		$new_data = array('response' => array('id_user' => $id_user, 'status' => 1));
 	}
 	else
-		$new_data = array('response' => array('login' => 'existing', 'status' => 0));
+		$new_data = array('response' => array('erorr' => 'login is now existing', 'status' => 0));
 
 }
 

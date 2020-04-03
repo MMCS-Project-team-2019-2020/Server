@@ -12,7 +12,7 @@ else
 	if ($res > 0)
 		$new_data = array('response' => array('id_user' => $data['id'],'status' => 1));
 	else
-		$new_data = array('response' => array('login_or_password' => 'does not exist', 'status' => 0));
+		$new_data = array('response' => array('erorr' => 'login_or_password does not exist', 'status' => 0));
 
 }
 echo json_encode($new_data);
