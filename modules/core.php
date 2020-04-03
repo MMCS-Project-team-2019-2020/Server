@@ -29,7 +29,9 @@ function isgive()//есть ли шара?
 }
 function isreg()//есть ли регистрация?
 {
-	if (isset($_GET['login']) && isset($_GET['password']) && isset($_GET['name']) && isset($_GET['phone']))
+	if (isset($_GET['name']) && isset($_GET['surname']) && isset($_GET['patronymic']) &&
+	 	isset($_GET['company']) && isset($_GET['position']) && isset($_GET['phone']) && 
+	 	isset($_GET['mail']) &&  isset($_GET['login']) && isset($_GET['password']))
 		return true;
 	else 
 		return false;

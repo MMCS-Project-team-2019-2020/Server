@@ -15,10 +15,15 @@ if (islogin()) {
 	$login = $_GET['login'];
 }
 if (isreg()) {
+	$name = $_GET['name'];
+	$surname = $_GET['surname'];
+	$patronymic = $_GET['patronymic'];
+	$company = $_GET['company'];
+	$position = $_GET['position'];
+	$phone = $_GET['phone'];
+	$mail = $_GET['mail'];
 	$login = $_GET['login'];
 	$password = $_GET['password'];
-	$name = $_GET['name'];
-	$phone = $_GET['phone'];
 }
 if (iscard()) {
 	$id_user = $_GET['id_user'];
@@ -43,7 +48,8 @@ if (isgetcard()) {
 if ($action == "login") {
 	require("models/login.php");
 }
-//Запрос - регистрация//Пример:   ?action=register&login=vasya&password=4testtststs&name=Василий&phone=89995556677
+//Запрос - регистрация//Пример:   ?action=register&name=test&surname=testtest&patronymic=testtesttest&company=testcompany&position=testposition&mail=testmail@mail.ru&phone=89995559999&login=testnew&password=testnew
+
 if ($action == "register") {
 	require("models/register.php");
 }

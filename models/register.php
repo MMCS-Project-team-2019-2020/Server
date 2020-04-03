@@ -10,7 +10,8 @@ else
 	$res = mysqli_query($link,"SELECT name FROM users WHERE login = '$login' ");
 	$res = mysqli_num_rows($res);
 	if ($res == 0) {
-		$res = mysqli_query($link, "INSERT INTO users (`login`, `hash`, `name`, `phone`, `active`) VALUES ('$login', '$password', '$name', '$phone', 1) ");
+		$res = mysqli_query($link, "INSERT INTO users	(`name`, `surname`, `patronymic`, `company`, `position`, `mail`, `phone`, `login`, `hash`, `active`) 
+											VALUES	('$name', '$surname', '$patronymic', '$company', '$posotion', '$mail', '$phone', '$login', '$password', 1)");
 		$id_user=mysqli_insert_id($link);
 		$new_data = array('response' => array('id_user' => $id_user, 'status' => 1));
 	}
