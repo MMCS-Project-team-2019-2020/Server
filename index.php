@@ -49,7 +49,6 @@ if ($action == "login") {
 	require("models/login.php");
 }
 //Запрос - регистрация//Пример:   ?action=register&name=test&surname=testtest&patronymic=testtesttest&company=testcompany&position=testposition&mail=testmail@mail.ru&phone=89995559999&login=testnew&password=testnew
-
 if ($action == "register") {
 	require("models/register.php");
 }
@@ -57,7 +56,7 @@ if ($action == "register") {
 if ($action == "get-profile") {
 	require("models/profile.php");
 }
-//Запрос - получить список визиток владельца//Пример:  ?action=get-list-card&login=vasya&password=123trxzxcsx
+//Запрос - получить список визиток владельца//Пример:  ?action=get-list-card&id_user=1004
 if ($action == "get-list-card") {
 	require("models/listcard.php");
 }
