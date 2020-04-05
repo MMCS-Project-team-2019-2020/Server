@@ -13,9 +13,16 @@ function islogin()//есть ли логин?
 	else 
 		return false;
 }
-function isid()//есть ли логин?
+function isiduser()//есть ли логин?
 {
 	if (isset($_GET['id_user']))
+		return true;
+	else 
+		return false;
+}
+function isdeletecard()//есть ли логин?
+{
+	if (isset($_GET['id_card']) && isset($_GET['id_user']))
 		return true;
 	else 
 		return false;

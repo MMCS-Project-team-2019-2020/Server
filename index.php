@@ -14,7 +14,11 @@ if (islp()) {
 if (islogin()) {
 	$login = $_GET['login'];
 }
-if (isid()) {
+if (isiduser()) {
+	$id_user = $_GET['id_user'];
+}
+if (isdeletecard()) {
+	$id_card = $_GET['id_card'];
 	$id_user = $_GET['id_user'];
 }
 if (isreg()) {
@@ -61,17 +65,21 @@ if ($action == "get-profile") {
 }
 //Запрос - получить список визиток владельца//Пример:  ?action=get-list-card&id_user=1004
 if ($action == "get-list-card") {
-	require("models/listcard.php");
+	require("models/list_recived_card.php");
 }
 //Запрос - Создать визитку//Пример:  ?action=card-create&id_user=1004&card_name=testcard&card_caption=ratatatata
 if ($action == "card-create") {
-	require("models/cardcreate.php");
+	require("models/own_card_create.php");
 }
 //Запрос - поделится визиткой//Пример: ?action=give-card&id_owner=1001&id_recipient=1000&id_card=10004 (id - это будет QR код визитки, тоесть шарить будем по id)
 if ($action == "give-card") {
-	require("models/givecard.php");
+	require("models/give_card.php");
 }
 //Запрос - получить данные визитки//Пример: ?action=get-card&id_card=10004
 if ($action == "get-card") {
-	require("models/getcard.php");
+	require("models/get_card.php");
+}
+//Запрос - удалить полученную визитку//Пример: ?action=delete-card&id_user=1005&id_card=10006
+if ($action == "delete-card") {
+	require("models/recived_card_delete.php");
 }

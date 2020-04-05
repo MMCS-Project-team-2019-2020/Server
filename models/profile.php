@@ -1,5 +1,5 @@
 <?php
-if (!isid())
+if (!isiduser())
 	exit(json_encode(array('response' => 'no data')));
 else
 {
