@@ -14,7 +14,7 @@ else
 			$new_data = array('response' => array('card_id' => $id_card ." deleted", 'status' => 1));
 		}
 		else
-			$new_data = array('response' => array('erorr' => 'user have not this card', 'status' => 0));
+			$new_data = array('response' => array('error' => 'user have not this card', 'status' => 0));
 
 }
 echo json_encode($new_data);

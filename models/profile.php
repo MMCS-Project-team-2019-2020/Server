@@ -26,7 +26,7 @@ else
 												'own_card' => $own_card['id']));
 	}
 	else
-		$new_data = array('response' => array('erorr' => 'id_user does not exist', 'status' => 0));
+		$new_data = array('response' => array('error' => 'id_user does not exist', 'status' => 0));
 
 }
 	echo json_encode($new_data);

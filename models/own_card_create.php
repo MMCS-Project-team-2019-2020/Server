@@ -19,10 +19,10 @@ else
 			$new_data = array('response' => array('id_card' => $id_card, 'status' => 1));
 		}
 		else
-			exit(json_encode(array('response' => array('erorr' => 'user have not own over 1 card' , 'status' => 0))));
+			exit(json_encode(array('response' => array('error' => 'user have not own over 1 card' , 'status' => 0))));
 	}
 else
-	$new_data = array('response' => array('erorr' => 'id_user does not exist', 'status' => 0));
+	$new_data = array('response' => array('error' => 'id_user does not exist', 'status' => 0));
 
 echo json_encode($new_data);
 }

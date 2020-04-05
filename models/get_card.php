@@ -15,7 +15,7 @@ else
 		$new_data = array('response' => array('id' => $data['id'], 'owner_id' => $data['owner_id'], 'name' => $data['name'],  'caption' => $data['caption']));
 	}
 	else
-		$new_data = array('response' => array('erorr' => 'id_card does not exist', 'status' => 0));
+		$new_data = array('response' => array('error' => 'id_card does not exist', 'status' => 0));
 
 }
 	echo json_encode($new_data);

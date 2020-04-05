@@ -16,7 +16,7 @@ else
 		$new_data = array('response' => array('cards' => $recipient_cards, 'status' => 1));
 	}
 	else
-		$new_data = array('response' => array('erorr' => 'user_id have not cards', 'status' => 0));
+		$new_data = array('response' => array('error' => 'user_id have not cards', 'status' => 0));
 
 }
 	echo json_encode($new_data);
