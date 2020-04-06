@@ -22,7 +22,8 @@ else
 												'position' => $data['position'], 
 												'mail' => $data['mail'], 
 												'phone' => $data['phone'], 
-												'login' => $data['login'], 
+												'login' => $data['login'],
+												'last_update' => $data['timestamp'], 
 												'own_card' => $own_card['id']));
 	}
 	else

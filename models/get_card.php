@@ -12,7 +12,11 @@ else
 		$res = mysqli_query($link, "SELECT * FROM card WHERE id = '$id_card'");
 		$data = mysqli_fetch_array($res);
 
-		$new_data = array('response' => array('id' => $data['id'], 'owner_id' => $data['owner_id'], 'name' => $data['name'],  'caption' => $data['caption']));
+		$new_data = array(	'response' => array('id' => $data['id'], 
+							'owner_id' => $data['owner_id'], 
+							'name' => $data['name'],  
+							'caption' => $data['caption'], 
+							'last_update' => $data['timestamp']));
 	}
 	else
 		$new_data = array('response' => array('error' => 'id_card does not exist', 'status' => 0));
