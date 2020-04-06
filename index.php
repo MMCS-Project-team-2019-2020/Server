@@ -37,6 +37,12 @@ if (iscard()) {
 	$card_name = $_GET['card_name'];
 	$card_caption = $_GET['card_caption'];
 }
+if (isupdatecard()) {
+	$id_card = $_GET['id_card'];
+	$id_user = $_GET['id_user'];
+	$card_name = $_GET['card_name'];
+	$card_caption = $_GET['card_caption'];
+}
 if (isgive()) {
 	$id_owner = $_GET['id_owner'];
 	$id_recipient = $_GET['id_recipient'];
@@ -70,6 +76,10 @@ if ($action == "get-list-card") {
 //Запрос - Создать визитку//Пример:  ?action=card-create&id_user=1004&card_name=testcard&card_caption=ratatatata
 if ($action == "card-create") {
 	require("models/own_card_create.php");
+}
+//Запрос - Обновить визитку//Пример:  ?action=card-update&id_card=10016&id_user=1004&card_name=ораа&card_caption=333test
+if ($action == "card-update") {
+	require("models/own_card_update.php");
 }
 //Запрос - поделится визиткой//Пример: ?action=give-card&id_owner=1001&id_recipient=1000&id_card=10004 (id - это будет QR код визитки, тоесть шарить будем по id)
 if ($action == "give-card") {

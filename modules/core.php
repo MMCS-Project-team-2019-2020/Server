@@ -34,6 +34,13 @@ function iscard()//есть ли визитка?
 	else 
 		return false;
 }
+function isupdatecard()//есть ли визитка?
+{
+	if (isset($_GET['id_user']) && isset($_GET['id_card']) && isset($_GET['card_name']) && isset($_GET['card_caption']))
+		return true;
+	else 
+		return false;
+}
 function isgive()//есть ли шара?
 {
 	if (isset($_GET['id_owner']) && isset($_GET['id_recipient']) && isset($_GET['id_card']))
