@@ -17,13 +17,13 @@ else
 		$new_data = array('response' => array(	'id' => $data['id'],
 												'name' => $data['name'],
 												'surname' => $data['surname'],
-												'patronymic' => $data['patronymic'], 
-												'company' => $data['company'], 
-												'position' => $data['position'], 
-												'mail' => $data['mail'], 
-												'phone' => $data['phone'], 
+												'patronymic' => $data['patronymic'],
+												'company' => $data['company'],
+												'position' => $data['position'],
+												'mail' => $data['mail'],
+												'phone' => $data['phone'],
 												'login' => $data['login'],
-												'last_update' => $data['timestamp'], 
+												'last_update' => $data['timestamp'],
 												'own_card' => $own_card['id']));
 	}
 	else
