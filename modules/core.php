@@ -73,9 +73,13 @@ function isgetcard()//есть ли id итки
 }
 function console($action)//запись запроса в базу
 {
-	$link = db_connect();
 	$ip = $_SERVER['REMOTE_ADDR'];
-	$res = mysqli_query($link, "INSERT INTO queryes (`query`, `ip`) VALUES ('$action', '$ip') ");
+	$date = date_default_timezone_set('Europe/Moscow');	
+	$date = date("Y-m-d H:m:s");
+
+	$current = file_get_contents("modules/queryes.txt");
+	$current .= "|Хост: ". $ip . "| |action: " . $action . "| |timestamp: ". $date ."|\n";
+	file_put_contents("modules/queryes.txt", $current);
 
 	return true;
 }
