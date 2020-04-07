@@ -61,6 +61,10 @@ if (isgetcard()) {
 if ($action == "login") {
 	require("models/login.php");
 }
+//Запрос - проверить на существование логина//Пример:   ?action=check-login&login=vasya
+if ($action == "check-login") {
+	require("models/check_login.php");
+}
 //Запрос - регистрация//Пример:   ?action=register&name=test&surname=testtest&patronymic=testtesttest&company=testcompany&position=testposition&mail=testmail@mail.ru&phone=89995559999&login=testnew&password=testnew
 if ($action == "register") {
 	require("models/register.php");
