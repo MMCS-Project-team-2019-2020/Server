@@ -6,7 +6,7 @@ else
 	include("db.php");
 	$link = db_connect();
 	console($action);
-	$res = mysqli_query($link,"SELECT name FROM users WHERE login = '$login' ");
+	$res = mysqli_query($link,"SELECT name FROM users WHERE BINARY login = '$login' ");
 	$res = mysqli_num_rows($res);
 	if ($res > 0 ) {
 		$new_data = array('response' => array('status' => 1));

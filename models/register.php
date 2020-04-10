@@ -7,7 +7,7 @@ else
 	//$password=md5($password);
 	$link = db_connect();
 	console($action);
-	$res = mysqli_query($link,"SELECT name FROM users WHERE login = '$login' ");
+	$res = mysqli_query($link,"SELECT name FROM users WHERE BINARY login = '$login' ");
 	$res = mysqli_num_rows($res);
 	if ($res == 0) {
 		$res = mysqli_query($link, "INSERT INTO users	(`name`, `surname`, `patronymic`, `company`, `position`, `mail`, `phone`, `login`, `hash`, `active`) 

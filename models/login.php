@@ -6,7 +6,7 @@ else
 	include("db.php");
 	$link = db_connect();
 	console($action);
-	$res = mysqli_query($link,"SELECT id FROM users WHERE login = '$login' AND hash = '$password'");
+	$res = mysqli_query($link,"SELECT id FROM users WHERE BINARY login = '$login' AND BINARY hash = '$password'");
 	$data = mysqli_fetch_array($res);
 	$res = mysqli_num_rows($res);
 	if ($res > 0)
