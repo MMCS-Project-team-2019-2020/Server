@@ -28,7 +28,7 @@ else
 			if($num != 0)
 				exit(json_encode(array('response' => array('error' => 'id_card already exists with this user.', 'status' => 0))));
 
-		$res = mysqli_query($link, "INSERT INTO registry (`card_id`, `owner_id`, `recipient_id`) VALUES ('$id_card', '$id_owner', '$id_recipient') ");
+		$res = mysqli_query($link, "INSERT INTO registry (`card_id`, `owner_id`, `recipient_id`, `gps`) VALUES ('$id_card', '$id_owner', '$id_recipient', '$gps') ");
 		$id_operation=mysqli_insert_id($link);
 		$new_data = array('response' => array('id_operation' => $id_operation,'status' => 1));
 	}

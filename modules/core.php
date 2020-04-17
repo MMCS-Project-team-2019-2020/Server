@@ -43,7 +43,7 @@ function isupdatecard()//есть ли визитка?
 }
 function isgive()//есть ли шара?
 {
-	if (isset($_GET['id_owner']) && isset($_GET['id_recipient']) && isset($_GET['id_card']))
+	if (isset($_GET['id_owner']) && isset($_GET['id_recipient']) && isset($_GET['id_card']) && isset($_GET['gps']))
 		return true;
 	else 
 		return false;

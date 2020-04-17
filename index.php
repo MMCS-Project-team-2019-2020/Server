@@ -47,6 +47,7 @@ if (isgive()) {
 	$id_owner = $_GET['id_owner'];
 	$id_recipient = $_GET['id_recipient'];
 	$id_card = $_GET['id_card'];
+	$gps = $_GET['gps'];
 }
 if (islistcard()) {
 	$id_user = $_GET['id_user'];
@@ -85,7 +86,7 @@ if ($action == "card-create") {
 if ($action == "card-update") {
 	require("models/own_card_update.php");
 }
-//Запрос - поделится визиткой//Пример: ?action=give-card&id_owner=1001&id_recipient=1000&id_card=10004 (id - это будет QR код визитки, тоесть шарить будем по id)
+//Запрос - поделится визиткой//Пример: ?action=give-card&id_owner=1001&id_recipient=1000&id_card=10004&gps=ул.Большая Садовая
 if ($action == "give-card") {
 	require("models/give_card.php");
 }
