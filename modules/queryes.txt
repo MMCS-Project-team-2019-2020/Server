@@ -15,3 +15,4 @@
 |Хост: 192.168.88.1| |action: login| |timestamp: 2020-04-10 13:04:48|
 |Хост: 192.168.88.1| |action: login| |timestamp: 2020-04-10 13:04:04|
 |Хост: 192.168.88.1| |action: login| |timestamp: 2020-04-10 13:04:10|
+|Хост: 127.0.0.1| |action: get-list-card| |timestamp: 2020-04-17 19:04:01|
