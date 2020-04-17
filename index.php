@@ -47,7 +47,7 @@ if (isgive()) {
 	$id_owner = $_GET['id_owner'];
 	$id_recipient = $_GET['id_recipient'];
 	$id_card = $_GET['id_card'];
-	$gps = $_GET['gps'];
+	//$gps = $_GET['gps'];
 }
 if (islistcard()) {
 	$id_user = $_GET['id_user'];
