@@ -86,4 +86,3 @@ function console($action)//запись запроса в базу
 
 	return true;
 }
-

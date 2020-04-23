@@ -10,9 +10,9 @@ else
 	$num = mysqli_num_rows($res);
 	if ($num > 0) {
 		$recipient_cards = array();
-		while($request = mysqli_fetch_array($res)) 
-			array_push($recipient_cards,array($request['card_id'] => $request['gps']));
-
+		while($request = mysqli_fetch_array($res)) {
+			$recipient_cards[$request['card_id']] = $request['gps'];
+		}
 		$new_data = array('response' => array('cards' => $recipient_cards, 'status' => 1));
 	}
 	else
