@@ -1,7 +1,0 @@
-# Lines starting with '#' are considered comments.
-# Ignore any file named foo.txt.
-u328338304_proj.sql
-# except foo.html which is maintained by hand.
-# !foo.html
-# Ignore objects and archives.
-# *.[oa]
