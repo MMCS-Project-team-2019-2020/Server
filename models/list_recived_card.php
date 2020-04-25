@@ -6,7 +6,7 @@ else
 	include("db.php");
 	$link = db_connect();
 	console($action);
-	$res = mysqli_query($link,"SELECT * FROM registry WHERE recipient_id = '$id_user'");
+	$res = mysqli_query($link,"SELECT * FROM registry WHERE recipient_id = '$id_user' ORDER BY id DESC");
 	$num = mysqli_num_rows($res);
 	if ($num > 0) {
 		$recipient_cards = array();
