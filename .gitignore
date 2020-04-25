@@ -2,6 +2,7 @@
 # Ignore any file named foo.txt.
 proj с 1000 юзеров и визитками.sql
 db.php
+.idea
 # except foo.html which is maintained by hand.
 # !foo.html
 # Ignore objects and archives.
