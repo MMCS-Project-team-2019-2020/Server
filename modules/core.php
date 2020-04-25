@@ -78,11 +78,10 @@ function console($action)//запись запроса в базу
 	//$res = mysqli_query($link, "INSERT INTO queryes (`query`, `ip`) VALUES ('$action', '$ip') ");
 
 	$date = date_default_timezone_set('Europe/Moscow');	
-	$date = date("Y-m-d H:m:s");
+	$date = date("Y-m-d H:i:s");
 
-	$current = file_get_contents("modules/queryes.txt");
-	$current .= "|Хост: ". $ip . "| |action: " . $action . "| |timestamp: ". $date ."|\n";
-	file_put_contents("modules/queryes.txt", $current);
+	$current = "|Хост: ". $ip . "| |action: " . $action . "| |timestamp: ". $date ."|\n";
+	file_put_contents("modules/queryes.txt", $current, FILE_APPEND | LOCK_EX);
 
 	return true;
 }
