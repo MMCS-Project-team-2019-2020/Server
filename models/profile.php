@@ -23,6 +23,7 @@ else
 												'mail' => $data['mail'],
 												'phone' => $data['phone'],
 												'login' => $data['login'],
+												'avatar' => (int)$data['avatar'],
 												'last_update' => $data['timestamp'],
 												'own_card' => $own_card['id']));
 	}

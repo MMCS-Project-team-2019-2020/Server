@@ -31,6 +31,7 @@ if (isreg()) {
 	$mail = $_GET['mail'];
 	$login = $_GET['login'];
 	$password = $_GET['password'];
+	$avatar = $_GET['avatar'];
 }
 if (iscard()) {
 	$id_user = $_GET['id_user'];

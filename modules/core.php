@@ -52,7 +52,7 @@ function isreg()//есть ли регистрация?
 {
 	if (isset($_GET['name']) && isset($_GET['surname']) && isset($_GET['patronymic']) &&
 	 	isset($_GET['company']) && isset($_GET['position']) && isset($_GET['phone']) && 
-	 	isset($_GET['mail']) &&  isset($_GET['login']) && isset($_GET['password']))
+	 	isset($_GET['mail']) &&  isset($_GET['login']) && isset($_GET['password']) && isset($_GET['avatar']))
 		return true;
 	else 
 		return false;
