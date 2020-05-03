@@ -3,7 +3,6 @@ if (!islogin())
 	exit(json_encode(array('response' => 'no data')));
 else
 {
-	include("db.php");
 	$link = db_connect();
 	console($action);
 	$res = mysqli_query($link,"SELECT name FROM users WHERE BINARY login = '$login' ");

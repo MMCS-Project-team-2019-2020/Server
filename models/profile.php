@@ -3,10 +3,9 @@ if (!isiduser())
 	exit(json_encode(array('response' => 'no data')));
 else
 {
-	include("db.php");
 	$link = db_connect();
 	console($action);
-	$res = mysqli_query($link,"SELECT name FROM users WHERE id = '$id_user'");
+	$res = mysqli_query($link,"SELECT id FROM users WHERE id = '$id_user'");
 	$res = mysqli_num_rows($res);
 	if ($res > 0) {
 		$res = mysqli_query($link, "SELECT * FROM users WHERE id = '$id_user'");
@@ -30,5 +29,5 @@ else
 	else
 		$new_data = array('response' => array('error' => 'id_user does not exist', 'status' => 0));
 
-}
 	echo json_encode($new_data);
+}
