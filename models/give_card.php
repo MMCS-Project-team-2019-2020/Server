@@ -6,7 +6,7 @@ else
 {
 	$link = db_connect();
 	
-	if(jwt($id_recipient){
+	if(jwt($id_recipient)){
 		console($action);
 		$res = mysqli_query($link,"SELECT name FROM users WHERE id = '$id_owner'");//проверка на существование id владельца в базе
 		$res = mysqli_num_rows($res);

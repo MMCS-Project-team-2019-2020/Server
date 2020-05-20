@@ -107,7 +107,7 @@ function console($action)//запись запроса в базу
 
 $permitted_chars = '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ-.';
  
-function generate_string($input, $strength = 16) {//генератор токенов
+function generate_string($input, $strength = 16) {//генератор случайных строк
     $input_length = strlen($input);
     $random_string = '';
     for($i = 0; $i < $strength; $i++) {
